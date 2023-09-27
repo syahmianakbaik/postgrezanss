@@ -12,5 +12,12 @@ pindah ke database
 
 hapus database
 ``` psql
-DROP DATABSE nama_database;
+    DROP DATABSE nama_database;
  ```
+buat table
+``` psql
+    CRATE TABLE public.user(
+    id SERIAL PRIMARY KEY 
+    nama VARCHAR(100),
+    saldo INT );
+```
