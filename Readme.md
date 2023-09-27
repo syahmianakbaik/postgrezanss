@@ -7,10 +7,10 @@ Create database
 
 pindah ke database
 ``` psql
-   \c fauzans_psql;
+   \c nama_database;
 ```
 
 hapus database
 ``` psql
-DROP DATABSE fauzans_psql;
+DROP DATABSE nama_database;
  ```
