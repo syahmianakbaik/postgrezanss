@@ -42,7 +42,22 @@ untuk menghapus sebuah data user
  DELETE FROM public.user WHERE id=1;
 ```
 
-untuk membuat  penghubung antar table
+untuk membuat  table provider
 ```psql
  ALTER TABLE public.provider ADD CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES public.user(id);
+```
+
+untuk menambahkan provider
+```psql
+INSERT INTO provider (user_id, nama) VALUES (2, 'TELKOMSEL');
+```
+
+untuk menyatukan antar 2 table 
+```psql
+ SELECT a.*, b.nama as kartu FROM public.user as a LEFT JOIN public.provider as b on b.user_id=2;
+```
+
+untuk lebih memperjelas seorang user 
+```psql
+ WHERE a.id=2;
 ```
