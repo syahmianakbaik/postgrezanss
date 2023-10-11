@@ -41,3 +41,8 @@ untuk menghapus sebuah data user
 ```psql
  DELETE FROM public.user WHERE id=1;
 ```
+
+untuk membuat  penghubung antar table
+```psql
+ ALTER TABLE public.provider ADD CONSTRAINT fk_user FOREIGN KEY (user_id) REFERENCES public.user(id);
+```
